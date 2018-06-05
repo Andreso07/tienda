@@ -1,0 +1,28 @@
+ #navbar-nav{
+        width: 1300px;
+        height:150px; 
+        margin-left: 60px;
+      }
+
+      #aside{
+            margin-left: 25px; 
+            float: left;
+            width: 200px;
+            height: 800px;
+            background: #eee;
+            clear: both;
+      }
+      
+      #section{
+            background-color: green;
+            margin-left: 230px;
+            padding-left: 25px;
+            padding-top: 10px;
+            padding-bottom: 15px
+      }
+
+      #footer{
+           background-color: black;
+           clear: both;
+           margin-top: 15px; 
+      }

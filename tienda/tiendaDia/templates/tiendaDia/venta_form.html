@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block maincontent %}
+<h2>Crear Venta</h2><br>
+    <form enctype="multipart/form-data" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-success" type="submit">Save</button>
+        <a class='btn btn-warning' href="{% url 'venta-list' %}">Cancel</a>
+    </form>
+{% endblock maincontent%}
+
+{%block index%}
+
+{%endblock index%}

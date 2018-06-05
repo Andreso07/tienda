@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block section %}
+    <h2>
+        {{ object.venta }}
+        
+        {% if object.venta_id %}
+            ( <a href="{% url "venta-detail" object.venta_id %}">{{ object.producto }}</a> )
+        {% endif %}
+    </h2>
+    <a href="{% url "venta-update" object.id %}">Editar</a>
+    <a href="{% url "venta-delete" object.id %}">Borrar</a>
+    <hr>
+{% endblock section %}
+
+{% block maincontent %}
+<div>
+    <div style="width: 400px">
+        <h3>{{ object.descripcion }}</h3>
+    </div>
+</div>
+{% endblock maincontent %}
+
+{%block index%}
+
+{%endblock index%}

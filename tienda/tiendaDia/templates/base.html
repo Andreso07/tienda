@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>TiendaDia</title>
+    <!-- CDN Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="overflow-y: auto;">
+    <!-- NavBar -->
+    <header>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button"class="navbar-toggle collapsed" data-toggle="collapse"data-target="#bs-example-navbar-collapse-1">
+                     <span class="sr-only">Toggle navigation</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"href="{% url "base" %}">TiendaDia</a>
+            </div> 
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav">
+                    <li><a class="dropdown-toggle" data-toggle="dropdown"role="button"aria-expanded="false">Productos ▼<span class="sr-only">(current)</span></a>
+                        <ul class="dropdown-menu"role="menu">
+                            <li><a href="{% url "producto-list" %}">Lista Producto</a></li>
+                            <li><a href="{% url "producto-create" %}">Crear Producto</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="dropdown-toggle" data-toggle="dropdown"role="button"aria-expanded="false">Ventas ▼</a>
+                        <ul class="dropdown-menu"role="menu">
+                            <li><a href="{% url "venta-list" %}">Lista Ventas</a></li>
+                            <li><a href="{% url "venta-create" %}">Crear Ventas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li class="dropdown">
+                      <a href="{% url "registrar"%}">Registrar
+                            <spanclass="caret"></span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="{% url "logout" %}">Cerrar Sesion
+                            <spanclass="caret"></span>
+                        </a>
+                        
+                    </li>
+                </ul>
+             </div>
+        </div>
+
+
+    </nav>
+    <div class="container">
+        {% block section %}
+        {% endblock section %}
+    </div>
+    <div class="container">
+        {% block maincontent %}
+        {% endblock maincontent %}
+    </div>
+    </header>
+
+    
+{% block index %}
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style type="text/css">
+       #navbar-nav{
+        width: 1300px;
+        height:150px; 
+        margin-left: 60px;
+      }
+
+      #aside{
+            margin-left: 25px; 
+            float: left;
+            width: 200px;
+            height: 2100px;
+            background: #eee;
+            clear: both;
+            margin-top: 25px;
+      }
+
+      #aside h1{
+        padding-top: 5px;
+      }
+      
+      #section{
+            
+           
+            margin-left: 230px;
+            padding-left: 25px;
+            padding-top: 0px;
+            padding-bottom: 15px;
+            margin-right: 300px;
+      }
+
+      #section h1, p{
+        margin-top: 20px;
+        text-align: left;
+        margin-right: 10px;
+      }
+
+      
+      footer{
+           width: 100%;
+           height: 50%;
+           margin-top: 50px;
+           clear: both;
+      }
+
+      footer .address{
+        background: #474545;
+        display: flex;
+        flex-direction: space-between;
+        flex-wrap: wrap;
+      }
+
+      footer .sociales{
+        background: #474545;
+        display: flex;
+        flex-direction: space-between;
+        flex-wrap: wrap;
+        padding-left: 200px;
+
+      }
+
+      footer .sociales a{
+        font-size: 35px;
+        color: #fff;
+        transition: all .9s ease;
+      }
+      
+      footer .sociales .facebook:hover{
+        transform: scale(1,3,1,3);
+       
+      }
+
+      footer .sociales .twitter:hover{
+        transform: scale(1,3,1,3);
+        margin-left: 50px;
+      }
+
+      footer .sociales .youtube:hover{
+        transform: scale(1,3,1,3);
+        margin-left: 50px;
+      }
+
+      footer .sociales .instagram:hover{
+        transform: scale(1,3,1,3);
+        margin-left: 50px;
+      }
+
+      footer .sociales .snapchat:hover{
+        transform: scale(1,3,1,3);
+        margin-left: 50px;
+      }
+
+
+
+
+    </style>
+   
+<div>
+<nav id="navbar-nav">
+  
+        <img src="http://1000logos.net/wp-content/uploads/2017/10/Logo-Samsung-png.png" WIDTH="200" HEIGHT="100" > <img src="http://xabes.com/wp-content/uploads/2015/08/Huawei-logo.jpg" WIDTH="200" HEIGHT="100" > <img src="http://www.novaeragc.com/wp-content/uploads/2011/09/sonylogoactual.png" WIDTH="200" HEIGHT="100" > <img src="https://seeklogo.com/images/M/motorola-logo-F2CD9AF5B7-seeklogo.com.png" WIDTH="200" HEIGHT="100"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyW54WQ9LyzoRjsSa1YQH_S_oWkf6AdsRkgVmNr6RhTD_1ex7rmw" WIDTH="200" HEIGHT="100" > <img src="http://www.pngmart.com/files/4/Lenovo-Logo-Transparent-PNG.png" WIDTH="200" HEIGHT="100">
+   
+</nav>
+</div>
+    <!--Diseno del cuerpo -->
+<div >
+    
+    <aside id="aside">
+        <div>
+        <h2>Categorías</h2>
+        </div>
+        <ul> 
+            <li>Buscar Equipo</li>
+
+        <ul>
+            <li><a href="https://www.geektopia.es/es/technology/2017/10/04/articulos/los-mejores-smartphones-y-telefonos-moviles-de-gama-baja.html" TARGET="_BLANK">Gama Baja</a>
+            <li><a href="https://www.geektopia.es/es/technology/2014/04/14/noticias/los-mejores-smartphones-de-gama-media-y-baja-del-momento-telefonos-moviles-celulares.html" TARGET="_BLANK">Gama Media</a></li>
+            <li><a href="https://www.geektopia.es/es/technology/2013/11/28/articulos/los-mejores-smartphones-y-phablets-de-gama-alta-del-momento-telefonos-diciembre-2013.html" TARGET="_BLANK">Gama Alta</a></li>
+        </ul>
+            <br>
+        <li >Registro / Contacto</li>
+
+        <ul>
+            <li><a href="https://www.imeicolombia.com.co/">Consultar IMEI</a></li>
+            <li ><a href="http://atencionalcliente.movistar.co/Proteccion_al_usuario/No_al_hurto_de_terminales/" TARGET="_BLANK">Registrar IMEI</a></li>
+            <li ><a href="http://atencionalcliente.movistar.co/Proteccion_al_usuario/No_al_hurto_de_terminales/" TARGET="_BLANK">Reportar Equipo</a></li>
+            <li ><a href="https://elbauldelprogramador.com/como-recuperar-el-imei-en-android/" TARGET="_BLANK">Recuperar IMEI</a></li>
+        </ul>
+        <ul>
+            <br>
+            <li >Contactos</li>
+            <li><a href="http://kepler.company/es/kepler.html" TARGET="_BLANK">Nuestro Equipo</a></li>
+            <li ><a href="http://kepler.company/es/" TARGET="_BLANK">Visítanos</a></li>
+            <li ><a href="http://kepler.company/es/contacto.html" TARGET="_BLANK">Contáctanos</a></li>
+           
+        </ul>
+        </li>
+
+        </ul>                     
+    </aside>
+</div>              
+              
+            <section id="section">
+                
+                  <article>
+                    <header>
+                        <h1>Enterate de los nuevos SmartPhones 2018</h1>
+
+                    </header>
+                    
+                    <figure>
+                        <img src="https://topesdegama.com/app/uploads/2018/06/Trasera-Moto-G6-768x373.jpg">
+                    </figure>
+
+                    <h1>Moto G6, doble cámara y cientos de posibilidades</h1>
+
+                  <p align="left">
+                      El nuevo moto g6 ha sorprendido a propios y extraños al ofrecer en un precio más que interesante, 249 euros, unas prestaciones de gamas superiores en las que destaca no solo un cuidado diseño, sino una cámara de doble lente que no sólo presume de hardware, sino de funcionalidades de software para hacerla muy divertida.
+
+No podemos empezar a hablar de ella, de todas formas, sin repasar sus características. La cámara principal del moto g6 cuenta con una doble lente y dos sensores, uno principal de 12 MP (f1.8) y otro de apoyo de 5 MP. Completa el conjunto una cámara frontal de 8 MP. Es capaz de grabar vídeo en Full HD 1080p a 30 fps así como cuenta con Flash LED doble en la trasera y de apoyo para los selfies por delante.
+                  </p>
+
+                  <figure>
+                    <img src="https://topesdegama.com/app/uploads/2017/10/Logo-Xiaomi-Mi-A1-750x400.jpg">
+                  </figure>
+                  <h1>El Xiaomi Mi A2 completamente al descubierto en un vídeo</h1>
+                  <p align="left">
+                      Uno de los teléfonos de gama media que mejores ventas ha tenido este año es el Xiaomi Mi A1. Este terminal ofrece una excelente relación calidad/precio y, por ello, son muchos los que esperan con interés lo que ofrecerá su sucesor. Pues bien, te mostramos cómo será exactamente el Xiaomi Mi A2.
+
+Este nuevo terminal, que ha aparecido en un vídeo que os dejamos más adelante en este artículo y que, en Asia, se venderá como Xiaomi Mi 6X. Mantendrá un cuerpo de metal por completo (sólo existirá plástico en los elementos para que salga la señal de las antenas internas), y algunos detalles a conocer del aspecto que tendrá el Xiaomi Mi A2 es que, como se ha podido ver, el lector de huellas se mantendrá en la parte posterior (donde, también, está ubicada la cámara trasera en la parte superior izquierda donde no faltan dos sensores).
+                  </p>
+
+                 <iframe width="750" height="400" src="https://www.youtube.com/embed/XRmyJUIjloI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+             <p align="left">
+              Finalmente hay que comentar que la cámara principal, que dará uso a Inteligencia Artificial (IA), se mantiene en dos elementos de 12 megapíxeles el principal -que no aumenta su resolución, pero llega con un focal mejorado en el principal que se queda en F1.8, por F:2.0 del Xiaomi Mi A1-. Y, el segundo sensor, es de 20 Mpx (F:1.8), por lo que sí hay un claro avance aquí. Desgraciadamente no tendrá conectividad NFC, y la batería tendrá una carga de 3.010 mAh con recarga rápida. Si todo esto se confirma como aparece en el vídeo, ¿qué os parecerá el nuevo Xiaomi Mi A2?
+             </p>
+
+                  </article>
+                
+            </section>
+
+
+    <footer>
+      
+      <div class="sociales">
+        
+       
+
+        <a href="https://www.facebook.com/#" class="facebook"><i class="fa fa-facebook-square"></i></a>
+        <a href="https://www.twitter.com/#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.youtube.com/#" class="youtube"><i class="fa fa-youtube-play"></i></a>
+        <a href="https://www.instagram.com/#" class="instagram"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.snapchat.com/#" class="snapchat"><i class="fa fa-snapchat"></i></a>
+      </div>
+        
+    </footer>
+
+
+    {% endblock index %}
+</body>
+
+</html>
